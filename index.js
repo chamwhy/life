@@ -1,4 +1,5 @@
 const dateBtn = document.getElementById('dateBtn');
+const changeBtn = document.getElementById('changeBtn');
 const dateInput = document.getElementById('dateInput');
 const birth = document.getElementById('birth');
 const panel = document.getElementById('panel');
@@ -15,6 +16,11 @@ dateBtn.addEventListener('click', function () {
     }
 });
 
+changeBtn.addEventListener('click', function () {
+    localStorage.removeItem("birth");
+    location.href = "";
+});
+
 function show() {
 
     panel.className = "panel show";
@@ -22,7 +28,10 @@ function show() {
         birth.style.display = "none";
         panel.className = "panel";
         container.style.display = "block";
+        setTimeout(function () {
+            panel.style.zIndex = -10;
 
+        }, 500);
     }, 500);
 }
 

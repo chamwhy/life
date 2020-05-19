@@ -27,6 +27,7 @@
         display: flex;
         align-items: center;
         text-align: center;
+        margin-bottom: 5rem;
       }
       .calendar {
         margin-top: 5rem;
@@ -74,7 +75,8 @@
         margin-top: 0.8rem;
         cursor: pointer;
       }
-      .dateBtn {
+      .dateBtn,
+      .changeBtn {
         margin-top: 0.7rem;
         width: 10rem;
         height: 2rem;
@@ -89,7 +91,8 @@
         transition: background-color 0.2s;
         cursor: pointer;
       }
-      .dateBtn:active {
+      .dateBtn:active,
+      .changeBtn:active {
         background-color: rgb(57, 99, 177);
       }
       /* Removes the clear button from date inputs */
@@ -151,6 +154,7 @@
           <canvas id="canvas" width="790" height="660"></canvas>
         </div>
       </div>
+      <button id="changeBtn" class="changeBtn">change date</button>
     </div>
     <script src="index.js"></script>
   </body>
